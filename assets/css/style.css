@@ -3,22 +3,37 @@
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
     grid-template-areas: 
-    "encabezado"
+    "header"
     "contenido"
-    "rodapie";
+    "footer";
     grid-template-columns: auto;
-    grid-template-rows: 50px 100vh auto; /* 100vh --> tomar toda la dimension de la pantalla*/
+    grid-template-rows: 50px auto auto; /* 100vh --> tomar toda la dimension de la pantalla*/
     
 }
+.encabezado{
+    align-items: center;
+    display: flex;
+    grid-area: header;
+    padding: 0 2rem;
 
-.encabezado {
-    grid-area: encabezado;
+}
+.menu__link{
+    text-decoration: none;
+    color: #333333;
+    padding: .5rem 1rem;
+}
+.menu__link:hover , .menu__link:active{
+    border-bottom: 2px solid #0073e6;
 }
 .contenido {    
     grid-area: contenido;
+    padding: 0 2rem;
 }
 
-.rodapie { 
-    background:#0099ff;
-    grid-area: rodapie;
+.rodapie{ 
+    grid-area: footer;
+    background: #fdfdfd;
+    color: #333333;
+    padding: 1rem;
+    text-align: center;
 }
