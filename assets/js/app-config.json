@@ -1,0 +1,17 @@
+{
+	"modal": {
+		"id": "disclaimerModal",
+		"closeButtonId": "closeModal",
+		"acceptButtonId": "acceptModal",
+		"showOnLoad": true
+	},
+	"menu": {
+		"toggleId": "menuToggle",
+		"menuListId": "menuLista",
+		"mobileBreakpoint": 480,
+		"icons": {
+			"open": "fa-bars",
+			"close": "fa-times"
+		}
+	}
+}
