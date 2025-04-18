@@ -70,3 +70,82 @@
 	font-size: 1.8rem;
 	color: var(--accent-primary);
 }
+
+/* Botón de menú hamburguesa para móviles */
+.menu__mobile-toggle {
+	display: none;
+	background: transparent;
+	border: none;
+	color: var(--text-primary);
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: color var(--transition-speed);
+}
+
+.menu__mobile-toggle:hover {
+	color: var(--accent-primary);
+}
+
+/* Media query para menú en dispositivos móviles */
+@media only screen and (max-width: 767px) {
+	.menu__link span {
+		display: none;
+	}
+
+	.menu__link i {
+		font-size: 1.2rem;
+	}
+}
+
+/* Media query para menú hamburguesa en dispositivos muy pequeños */
+@media only screen and (max-width: 480px) {
+	.menu__mobile-toggle {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu__lista {
+		position: fixed;
+		top: 70px;
+		left: 0;
+		width: 100%;
+		background-color: rgba(26, 44, 56, 0.98);
+		flex-direction: column;
+		gap: 0;
+		transform: translateY(-100%);
+		transition: transform 0.3s ease;
+		z-index: 99;
+		padding: 1rem 0;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.menu__lista.show {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.menu__item {
+		width: 100%;
+	}
+
+	.menu__link {
+		padding: 1rem 1.5rem;
+		width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		justify-content: flex-start;
+	}
+
+	.menu__link span {
+		display: inline-block;
+		margin-left: 1rem;
+	}
+
+	.menu__link::after {
+		display: none;
+	}
+}

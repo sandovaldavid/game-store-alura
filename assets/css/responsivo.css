@@ -81,6 +81,52 @@
 	.rodapie {
 		margin-top: 1rem;
 	}
+
+	/* Modal más adaptado a móviles */
+	.modal-content {
+		width: 95%;
+		max-width: 100%;
+	}
+
+	.modal-header h3 {
+		font-size: 1.1rem;
+	}
+
+	.modal-body {
+		padding: 1.25rem 1rem;
+	}
+
+	.modal-social {
+		flex-direction: column;
+	}
+
+	.modal-social-link {
+		justify-content: center;
+	}
+
+	/* Ajustes para el menú en móviles */
+	.encabezado {
+		padding: 0 1rem;
+	}
+
+	.menu__lista {
+		gap: 0.5rem;
+	}
+
+	.menu__link {
+		padding: 0.5rem 0.75rem;
+		font-size: 0.8rem;
+	}
+
+	/* Otras mejoras para móviles */
+	.about__title {
+		font-size: 1.75rem;
+	}
+
+	.about {
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -97,6 +143,15 @@
 
 	.box {
 		padding: 0 0 1.5rem 1.5rem;
+	}
+
+	.modal-content {
+		width: 90%;
+	}
+
+	.menu__link {
+		padding: 0.6rem 0.9rem;
+		font-size: 0.85rem;
 	}
 }
 
@@ -123,5 +178,62 @@
 @media only screen and (min-width: 1200px) {
 	.populares__card {
 		width: calc(20% - 1.2rem);
+	}
+}
+
+/* Ajuste para orientación móvil */
+@media only screen and (max-height: 600px) {
+	.modal-content {
+		max-height: 90vh;
+		overflow-y: auto;
+	}
+}
+
+/* Ocultar y mostrar elementos del menú según el dispositivo */
+@media only screen and (max-width: 767px) {
+	.menu__logo span {
+		display: none;
+	}
+
+	/* Solo ocultar los textos del menú en la barra normal, no en el menú desplegable */
+	.menu__lista:not(.show) .menu__link span {
+		display: none;
+	}
+
+	.menu__lista:not(.show) .menu__link {
+		justify-content: center;
+	}
+
+	.menu__lista:not(.show) .menu__link i {
+		font-size: 1.2rem;
+		margin: 0;
+	}
+}
+
+/* Mejorar visualización del menú en dispositivos muy pequeños */
+@media only screen and (max-width: 480px) {
+	.menu__lista {
+		gap: 0.25rem;
+	}
+
+	.menu__link {
+		padding: 0.5rem;
+	}
+
+	/* Estilos específicos para el menú desplegable en móviles */
+	.menu__lista.show .menu__link {
+		display: flex;
+		align-items: center;
+		padding: 1rem 1.5rem;
+	}
+
+	.menu__lista.show .menu__link span {
+		display: inline-block;
+		margin-left: 1rem;
+		font-size: 0.95rem;
+	}
+
+	.menu__lista.show .menu__link i {
+		font-size: 1.2rem;
 	}
 }
