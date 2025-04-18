@@ -144,12 +144,12 @@ La landing page está diseñada para ser intuitiva:
 
 ### Vista de Escritorio
 
-![Vista Desktop](https://via.placeholder.com/800x400/3498db/ffffff?text=Game+Store+Alura+-+Desktop)
+![Vista Desktop](/mockups/desktop.png)
 
 ### Vista Móvil
 
 <div align="center">
-  <img src="https://via.placeholder.com/300x600/e74c3c/ffffff?text=Game+Store+Alura+-+Mobile" alt="Vista Móvil">
+  <img src="mockups/mobile.png" alt="Vista Móvil">
 </div>
 
 ---
