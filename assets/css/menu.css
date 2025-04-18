@@ -1,8 +1,70 @@
 .menu__link {
-    color: #333333;
-    padding: .5rem 1rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  padding: .75rem 1.25rem;
+  font-weight: 500;
+  position: relative;
+  letter-spacing: 0.5px;
+  transition: color var(--transition-speed);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
 }
 
 .menu__link:hover, .menu__link.activo {
-    border-bottom: 2px solid #0073e6;
+  color: var(--accent-primary);
+}
+
+.menu__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-gaming);
+  transition: width var(--transition-speed), left var(--transition-speed);
+}
+
+.menu__link:hover::after, .menu__link.activo::after {
+  width: 100%;
+  left: 0;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__lista {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Añadir estilo para .menu__item */
+.menu__item {
+  display: flex;
+  align-items: center;
+}
+
+.menu__logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu__logo span {
+  color: var(--accent-primary);
+}
+
+.menu__logo-icon {
+  font-size: 1.8rem;
+  color: var(--accent-primary);
 }
