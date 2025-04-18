@@ -144,12 +144,12 @@ La landing page está diseñada para ser intuitiva:
 
 ### Vista de Escritorio
 
-![Vista Desktop](/mockups/desktop.png)
+![Vista Desktop](/mockups/desktop-v2.0.png)
 
 ### Vista Móvil
 
 <div align="center">
-  <img src="mockups/mobile.png" alt="Vista Móvil">
+  <img src="mockups/mobile-v2.0.png" alt="Vista Móvil">
 </div>
 
 ---
