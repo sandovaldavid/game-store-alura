@@ -73,11 +73,11 @@ function initMobileMenu(menuConfig) {
 	if (!menuToggle || !menuLista) return;
 
 	menuToggle.addEventListener('click', function () {
-		menuLista.classList.toggle('menu__lista--activo');
+		menuLista.classList.toggle('show');
 
 		const icon = menuToggle.querySelector('i');
 		if (icon) {
-			if (menuLista.classList.contains('menu__lista--activo')) {
+			if (menuLista.classList.contains('show')) {
 				icon.classList.remove('fas', menuConfig.icons.open);
 				icon.classList.add('fas', menuConfig.icons.close);
 			} else {
@@ -91,7 +91,7 @@ function initMobileMenu(menuConfig) {
 	menuLinks.forEach((link) => {
 		link.addEventListener('click', function () {
 			if (window.innerWidth <= menuConfig.mobileBreakpoint) {
-				menuLista.classList.remove('menu__lista--activo');
+				menuLista.classList.remove('show');
 
 				const icon = menuToggle.querySelector('i');
 				if (icon) {
