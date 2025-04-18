@@ -338,30 +338,61 @@ body.disclaimer-visible {
 }
 
 .rodapie__social-link {
-	color: var(--text-secondary);
-	font-size: 1.5rem;
-	transition: color var(--transition-speed), transform var(--transition-speed);
+	color: var(--blanco);
+	font-size: 1.2rem;
+	margin: 0 0.5rem;
+	text-decoration: none;
+	transition: transform 0.3s, color 0.3s;
+	display: inline-block;
+	position: relative;
 }
 
 .rodapie__social-link:hover {
-	color: var(--accent-primary);
+	color: var(--destaque);
 	transform: translateY(-3px);
 }
 
+/* Estilo para mostrar el nombre de la página en tooltip */
+.rodapie__social-link::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: -25px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+
+.rodapie__social-link:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
+
 .rodapie__social-link:nth-child(1):hover {
-	color: #7289da; /* Discord color */
+	color: #7289da; /* GitHub color */
 }
 
 .rodapie__social-link:nth-child(2):hover {
-	color: #9146ff; /* Twitch color */
+	color: #0a66c2; /* LinkedIn color */
 }
 
 .rodapie__social-link:nth-child(3):hover {
-	color: #ffffff88; /* Steam color */
+	color: #1da1f2; /* Twitter color */
 }
 
 .rodapie__social-link:nth-child(4):hover {
-	color: #ff0000; /* YouTube color */
+	color: #ff0000; /* CodePen color */
+}
+
+.rodapie__social-link:nth-child(5):hover {
+	color: #00d8ff; /* Portfolio color */
 }
 
 /* Estilos para la sección "Acerca de" */
