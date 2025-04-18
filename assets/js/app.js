@@ -101,26 +101,4 @@ function initMobileMenu(menuConfig) {
 			}
 		});
 	});
-
-	const sections = document.querySelectorAll('section');
-	const navLinks = document.querySelectorAll('.menu__link');
-
-	window.addEventListener('scroll', function () {
-		let current = '';
-
-		sections.forEach((section) => {
-			const sectionTop = section.offsetTop;
-			const sectionHeight = section.clientHeight;
-			if (pageYOffset >= sectionTop - sectionHeight / 3) {
-				current = section.getAttribute('id');
-			}
-		});
-
-		navLinks.forEach((link) => {
-			link.classList.remove('activo');
-			if (link.getAttribute('href').slice(1) === current) {
-				link.classList.add('activo');
-			}
-		});
-	});
 }
