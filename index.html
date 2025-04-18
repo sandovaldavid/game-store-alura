@@ -67,29 +67,32 @@
 					<i class="fas fa-gamepad menu__logo-icon"></i>
 					GAME<span>STORE</span>
 				</div>
-				<ul class="menu__lista">
+				<button class="menu__mobile-toggle" id="menuToggle">
+					<i class="fas fa-bars"></i>
+				</button>
+				<ul class="menu__lista" id="menuLista">
 					<li class="menu__item">
 						<a class="menu__link activo" href="#home">
 							<i class="fas fa-home"></i>
-							Inicio
+							<span>Inicio</span>
 						</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="#aplicaciones">
 							<i class="fas fa-mobile-alt"></i>
-							Aplicaciones
+							<span>Aplicaciones</span>
 						</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="#juegos">
 							<i class="fas fa-gamepad"></i>
-							Juegos
+							<span>Juegos</span>
 						</a>
 					</li>
 					<li class="menu__item">
 						<a class="menu__link" href="#about">
 							<i class="fas fa-info-circle"></i>
-							Acerca de
+							<span>Acerca de</span>
 						</a>
 					</li>
 				</ul>
@@ -663,16 +666,73 @@
 		<script>
 			// Código para el modal del disclaimer
 			document.addEventListener('DOMContentLoaded', function () {
+				// Mostrar el modal al cargar la página
 				const modal = document.getElementById('disclaimerModal');
-				modal.classList.add('active');
+				if (modal) {
+					modal.classList.add('active');
 
-				document.getElementById('closeModal').addEventListener('click', function () {
-					modal.classList.remove('active');
-				});
+					// Cerrar el modal con el botón de cerrar o el botón "Entendido"
+					const closeModalBtn = document.getElementById('closeModal');
+					if (closeModalBtn) {
+						closeModalBtn.addEventListener('click', function () {
+							modal.classList.remove('active');
+						});
+					}
 
-				document.getElementById('acceptModal').addEventListener('click', function () {
-					modal.classList.remove('active');
-				});
+					const acceptModalBtn = document.getElementById('acceptModal');
+					if (acceptModalBtn) {
+						acceptModalBtn.addEventListener('click', function () {
+							modal.classList.remove('active');
+						});
+					}
+				}
+
+				// Código para el menú hamburguesa en móviles
+				const menuToggle = document.getElementById('menuToggle');
+				const menuLista = document.getElementById('menuLista');
+
+				if (menuToggle && menuLista) {
+					menuToggle.addEventListener('click', function () {
+						menuLista.classList.toggle('show');
+						// Cambiar el icono del botón según el estado del menú
+						const icon = menuToggle.querySelector('i');
+						if (icon) {
+							if (menuLista.classList.contains('show')) {
+								icon.classList.remove('fa-bars');
+								icon.classList.add('fa-times');
+							} else {
+								icon.classList.remove('fa-times');
+								icon.classList.add('fa-bars');
+							}
+						}
+					});
+
+					// Cerrar el menú al hacer clic en un enlace
+					document.querySelectorAll('.menu__link').forEach(function (link) {
+						link.addEventListener('click', function () {
+							if (window.innerWidth <= 480) {
+								menuLista.classList.remove('show');
+								const icon = menuToggle.querySelector('i');
+								if (icon) {
+									icon.classList.remove('fa-times');
+									icon.classList.add('fa-bars');
+								}
+							}
+						});
+					});
+
+					// Cerrar el menú al hacer scroll
+					window.addEventListener('scroll', function () {
+						if (window.innerWidth <= 480 && menuLista.classList.contains('show')) {
+							menuLista.classList.remove('show');
+							const icon = menuToggle.querySelector('i');
+							if (icon) {
+								icon.classList.remove('fa-times');
+								icon.classList.add('fa-bars');
+							}
+						}
+					});
+				}
 			});
 		</script>
 	</body>
