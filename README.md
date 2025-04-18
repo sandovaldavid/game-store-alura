@@ -14,19 +14,17 @@ momento.
 
 ---
 
-## 📜 Tabla de Contenido
+## 🖼️ Capturas de Pantalla
 
-1. [Descripción](#-descripción)
-2. [Características](#-características)
-3. [Tecnologías](#️-tecnologías)
-4. [Instalación](#️-instalación)
-5. [Uso](#-uso)
-6. [Capturas de Pantalla](#️-capturas-de-pantalla)
-7. [Estructura del Proyecto](#-estructura-del-proyecto)
-8. [Tests](#-tests)
-9. [Contribuciones](#-contribuciones)
-10. [Licencia](#-licencia)
-11. [Autor](#-autor)
+### Vista de Escritorio
+
+![Vista Desktop](/mockups/desktop-v2.0.png)
+
+### Vista Móvil
+
+<div align="center">
+  <img src="mockups/mobile-v2.0.png" alt="Vista Móvil">
+</div>
 
 ---
 
@@ -137,20 +135,6 @@ La landing page está diseñada para ser intuitiva:
     - Título del producto
     - Fecha de lanzamiento
     - Descripción del producto
-
----
-
-## 🖼️ Capturas de Pantalla
-
-### Vista de Escritorio
-
-![Vista Desktop](/mockups/desktop-v2.0.png)
-
-### Vista Móvil
-
-<div align="center">
-  <img src="mockups/mobile-v2.0.png" alt="Vista Móvil">
-</div>
 
 ---
 
