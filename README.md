@@ -192,6 +192,7 @@ detalles.
 -   🌐 Portafolio: [devsandoval.me](https://devsandoval.me)
 -   💼 LinkedIn: [@devsandoval](https://linkedin.com/in/devsandoval)
 -   💻 GitHub: [@sandovaldavid](https://github.com/sandovaldavid)
+-   📧 Email: [contact@devsandoval.me](mailto:contact@devsandoval.me)
 
 ---
 
