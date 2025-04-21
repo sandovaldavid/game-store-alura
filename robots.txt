@@ -1,0 +1,8 @@
+# robots.txt file for Game Store Demo
+# https://game-store-alura.devsandoval.me/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://game-store-alura.devsandoval.me/sitemap.xml
