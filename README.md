@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/Tipo-Landing%20Page-brightgreen" alt="Tipo: Landing Page">
-  <img src="https://img.shields.io/badge/Versión-1.0-blue" alt="Versión: 1.0">
+  <img src="https://img.shields.io/badge/Versión-2.1.0-blue" alt="Versión: 2.1.0">
   <img src="https://img.shields.io/badge/Estado-Completado-success" alt="Estado: Completado">
   <img src="https://img.shields.io/badge/Responsive-Sí-orange" alt="Responsive: Sí">
   <img src="https://img.shields.io/badge/Licencia-MIT-lightgrey" alt="Licencia: MIT">
