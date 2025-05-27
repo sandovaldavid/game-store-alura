@@ -40,14 +40,15 @@ function initModal(modalConfig) {
 	const acceptButton = document.getElementById(modalConfig.acceptButtonId);
 
 	if (modalConfig.showOnLoad) {
-		const hasAcceptedDisclaimer = localStorage.getItem('disclaimerAccepted');
+		const hasAcceptedDisclaimer =
+			localStorage.getItem('disclaimerAccepted');
 		if (!hasAcceptedDisclaimer) {
-			modal.style.display = 'flex';
+			modal.classList.add('active');
 		}
 	}
 
 	function closeModal() {
-		modal.style.display = 'none';
+		modal.classList.remove('active');
 		localStorage.setItem('disclaimerAccepted', 'true');
 	}
 
